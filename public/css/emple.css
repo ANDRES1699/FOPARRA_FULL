@@ -1,0 +1,25 @@
+
+#navV ul{
+  margin-top: 80%;
+  list-style: none;
+  display: block;
+}
+
+#navV ul li{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #fff;
+    overflow: hidden;
+  }
+
+  #navV ul li a{
+    position: relative;
+    padding: 16px;
+    padding-right: 25px;
+    float:left;
+    font-size: 1.2em;
+    color:white;
+    text-decoration: none;
+  }
+
+ 

@@ -1,0 +1,35 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+#logo{
+    width:5em;
+}
+#menu{
+    background-color: rgb(243, 172, 18)!important;
+;}
+#footer{
+    background-color:  rgb(243, 172, 18)!important;
+    margin-bottom: 0!important;
+}
+#menu a{
+    color: white!important;
+    border-bottom: 2px;
+}
+#lema{
+    font-weight: 500;
+}
+#menu a:hover{
+    box-sizing: border-box;
+	border-bottom: 2px solid #fff;
+}
+#img{
+
+    height: 45em;
+}
+
+
+
+
+  
+  
