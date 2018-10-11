@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
-    <a class="navbar-brand ml-auto text-white" href="#" id="lema">"El séptimo arte encanta al ser humano"</a>
+    <a class="navbar-brand ml-auto text-white" href="#" id="lema">"El séptimo arte encanta al ser humano"</a><i class="fa fa-institution" aria-hidden="true"></i>
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active px-3">
                 <h5>
