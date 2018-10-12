@@ -18,7 +18,35 @@ class Index extends Controller
 	
 	public function iniciarSesion()
 	{
-		echo "Entro!";
+		// validar contraseña y rol
+		try{
+			$data=$this->model->consultarUsuario($_POST['dni']);
+			
+			if($data){
+				var_dump($data);
+				if ($data->contrasenia != $_POST['pass']) {
+					header('Location:'.RUTA_URL.'index/index');
+				} else {
+					if ($data->rol_idrol == 2) {
+						header('Location:'.RUTA_URL.'vendedor/mostrarMenu');
+					} elseif($data->rol_idrol ==3) {
+						# code...
+					}
+					else{
+						header('Location:'.RUTA_URL.'index/index');
+					}
+					
+				}
+				
+			}
+			else{
+				header('Location:'.RUTA_URL.'index/index');
+			}
+			
+		}
+		catch(Exception $e){
+			die($e);
+		}
 	}	
 	public function cerrarSesion()
 	{
