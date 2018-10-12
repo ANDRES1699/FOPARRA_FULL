@@ -11,24 +11,26 @@
        
             <li class="mt-3">
                 <div class="barra">
-                <a href="#" rel="noopener noreferrer">Crear</a>
-                    <a href="<?=RUTA_URL?>vendedor/mostrarRegistrarCliente"><i class="fa fa-address-book-o" aria-hidden="true"></i></a>
-                    <a href="<?=RUTA_URL?>vendedor/mostrarRegistrarAlquiler"><i class="fa fa-film" aria-hidden="true"></i></a>
+                <a href="#" rel="noopener noreferrer">Gestiona</a>
+                    <a href="<?=RUTA_URL?>vendedor/mostrarRegistrarCliente" class="px-0" title="Cliente"><i class="fa fa-address-book-o" aria-hidden="true"></i></a>
+                    <a href="<?=RUTA_URL?>vendedor/mostrarRegistrarAlquiler" title="Alquiler"><i class="fa fa-film" aria-hidden="true"></i></a>
                 </div>
             </li>        
             <li>
                 <div class="barra">
-                <a href="#" rel="noopener noreferrer">Consulta <i class="ml-2 fa fa-address-book-o" aria-hidden="true"></i> <i class="ml-2 fa fa-film" aria-hidden="true"></i></a>
+                <a href="#" rel="noopener noreferrer" class="pr-2">Consulta</a>
+                <a href="" title="Consultar cliente" class="px-0"><i class="ml-2 fa fa-address-book-o" class="px-0" aria-hidden="true"></i> </a>
+                <a href="" title="Consultar alquiler" class="px-2"><i class="ml-2 fa fa-film" aria-hidden="true"></i></a>
                 </div>
             </li>
             <li>
                 <div class="barra">
-                     <a href="#" rel="noopener noreferrer">Morosos<i class="ml-2 fa fa-file-movie-o" aria-hidden="true"></i></a>
+                    <a href="#" rel="noopener noreferrer" title="Clientes morosos">Morosos<i class="ml-2 fa fa-file-movie-o" aria-hidden="true"></i></a>
                 </div>
             </li>
             <li>
                 <div class="barra">
-                <a href="#" rel="noopener noreferrer">Estado <i class="ml-2 fa fa-circle-o-notch" aria-hidden="true"></i></a>
+                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado <i class="ml-2 fa fa-circle-o-notch" aria-hidden="true"></i></a>
                 </div>
             </li>
             <li>
@@ -45,13 +47,13 @@
         <div class="row">
             <div class="col-11 p-0">
                 <nav class="navbar navbar-expand-sm navbar-light bg-light px-5 mr-5 shadow" id="menu">
-                    <img src="<?php echo RUTA_URL?>img/logo.png" id="logo" class="navbar-brand">
+                    <img src="<?php echo RUTA_URL?>img/logo.png" id="logo" class="navbar-brand mr-0">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <a class="navbar-brand m-auto text-white pr-3" href="<?=RUTA_URL?>vendedor/mostrarMenu" id="lema">Vendedor <i class="fa fa-user-circle-o pl-1" aria-hidden="true" id="icon-ven"></i></a>
+                    <div class="collapse navbar-collapse pr-5" id="collapsibleNavId">
+                         <a class="navbar-brand m-auto text-white" href="<?=RUTA_URL?>vendedor/mostrarMenu" id="lema">Vendedor <i class="fa fa-user-circle-o pl-1" aria-hidden="true" id="icon-ven"></i></a>
                     </div>
                 </nav>
             </div>

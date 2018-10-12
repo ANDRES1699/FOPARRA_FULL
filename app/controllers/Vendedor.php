@@ -28,11 +28,12 @@
 	}	
  	public function registrarAlquiler()
 	{
-		echo "Entro!";
+		echo json_encode($_POST);
 	}	
  	public function consultarAlquileresHechos()
 	{
-		echo "Entro!";
+		$array=['nombre'=>'Juan','edad'=>'16','dni'=>$_POST['dni']];
+		echo json_encode($array);
 	}	
  	public function mostrarConsultarAlquileresCP ()
 	{
