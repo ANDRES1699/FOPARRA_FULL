@@ -12,11 +12,11 @@
  	}
  	public function mostrarRegistrarCliente()
 	{
-		echo "Entro!";
+		parent::viewIntern('vendedor/index','vendedor/cliente');
 	}	
 	public function mostrarMenu()
 	{
-		parent::view('vendedor/index');
+		parent::viewIntern('vendedor/index','vendedor/ventas');
 	}	
  	public function registrarCliente()
 	{
@@ -24,7 +24,7 @@
 	}	
  	public function mostrarRegistrarAlquiler()
 	{
-		echo "Entro!";
+		parent::viewIntern('vendedor/index','vendedor/alquiler');
 	}	
  	public function registrarAlquiler()
 	{
