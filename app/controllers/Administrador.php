@@ -8,7 +8,11 @@
 	function __construct()
  	{
  		# code...
- 	}
+	 }
+	public function mostrarMenu()
+	{
+		parent::view('administrador/index');
+	}	
  	public function actualizarPelicula()
 	{
 		echo "Entro!";

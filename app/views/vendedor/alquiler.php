@@ -19,7 +19,7 @@
                                 <form  method="POST" id="alquiler">
                                     <input type="text" class="form-control" name="dni" placeholder="dni" id="dni">
                                     <input type="text" class="form-control" name="num_pel" placeholder="número de pelicula" id="num_pel">
-                                    <a title="Agregar pelicula" class="d-flex justify-content-end p-2" id="agregar"><i class="fa fa-file-movie-o" aria-hidden="true" id="pelicula"></i> </a>                
+                                    <a title="Agregar pelicula" class="d-flex justify-content-end p-2 display-4" id="agregar"><i class="fa fa-file-movie-o" aria-hidden="true" id="pelicula"></i> </a>                
                                     <a title="Agregar pelicula" class="btn btn-success mt-2 form-control" id="agregarA" onclick="alquilar();">Agregar</a>
                                 </form>
                             </div>
@@ -141,6 +141,7 @@
                     }
                 });
     }
+
     function modal(data){
         
             $('#frm_act').html('<form action=""><input type="text" class="form-control" name="dni" placeholder="número de alquiler" id="dni" value="'+data.dni+'"><input type="text" class="form-control" name="nombre" placeholder="nombre" id="nombre" value="'+data.nombre+'"></form>');

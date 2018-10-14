@@ -3,11 +3,12 @@
 /**
  * 
  */
+session_start();
 class Core
 {
 	private $c;
 	private $m;
-	private $p;
+	public $p;
 
 	function __construct()
 	{
@@ -39,6 +40,9 @@ class Core
 		// echo $this->m;
 		// llamar método de controlador
 		$this->p=$url?array_values($url):[];
+		if ($this->p!=null) {
+			$_SESSION['p']=$this->p[0];
+		}
 		call_user_func_array([$this->c, $this->m], $this->p);
 	}
 

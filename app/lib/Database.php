@@ -40,7 +40,7 @@ class Database
 	// colocar la consulta
 	public function query($sql='')
 	{
-		$this->resultado=$conexion->prepare($sql);
+		$this->resultado=$this->conexion->prepare($sql);
 	}	
 	// ejecutar la sentencia
 	public function execute()

@@ -28,7 +28,19 @@ class UsuarioModel
 		$this->db->bindP(1,$id);
 		$this->db->execute();
 		return $this->db->show();
-	}		
+	}
+	public function agregarToken($data){
+		$this->db->query("UPDATE usuario SET _token=? WHERE dni=?");
+		$this->db->bindP(1,$data['token']);
+		$this->db->bindP(2,$data['dni']);
+		$this->db->execute();
+	}
+	public function quitarToken($data){
+		$this->db->query("UPDATE usuario SET _token='' WHERE dni=?");
+		$this->db->bindP(1,$data['token']);
+		$this->db->bindP(2,$data['dni']);
+		$this->db->execute();
+	}
 }
 
  ?>

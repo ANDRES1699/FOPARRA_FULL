@@ -30,12 +30,12 @@
             </button>
              </div>
             <div class="modal-body">
-                <form action="<?php echo RUTA_URL?>vendedor/mostrarMenu" method="POST">
+                <form action="<?php echo RUTA_URL?>index/iniciarSesion" method="POST">
                       <h4 class="text-center mb-4">Iniciar sesión</h4>
                       <label for="num">Número de documento:</label>
-                      <input type="number" class="form-control" name="" id="num" placeholder="">
+                      <input type="number" class="form-control" name="dni" id="dni" placeholder="">
                       <label for="contraseña">Contraseña:</label>
-                      <input type="password" class="form-control" name="" id="contraseña" placeholder="">
+                      <input type="password" class="form-control" name="pass" id="pass" placeholder="">
                     
                 
             </div>
@@ -57,14 +57,14 @@
     </ol>
     <div class="carousel-inner text-center" role="listbox">
         <div class="carousel-item active jsutify-content-center align-items-center ">
-         <img src="https://2.bp.blogspot.com/-rrFM1SR8C4c/WaNJ7pXEUOI/AAAAAAAAAto/x9xR_Ejq_VASoodFwkF5Wai4zh56FgVhgCLcBGAs/s1600/2.jpg" class="w-100" id="img" alt="First slide">
+         <img src="<?=RUTA_URL?>img/gal2.jpg" class="w-100" id="img" alt="First slide">
             
         </div>
         <div class="carousel-item">
-            <img src="http://www.bolsamania.com/cine/wp-content/uploads/2015/12/131.jpg" class="w-100" id="img" alt="First slide"> 
+            <img src="<?=RUTA_URL?>img/gal1.jpg" class="w-100" id="img" alt="First slide"> 
         </div>
         <div class="carousel-item">
-            <img src="https://musica.elbierzodigital.com/wp-content/uploads/series-tv.png   " alt="" class="w-100" id="img">
+            <img src="<?=RUTA_URL?>img/gal3.jpg" alt="" class="w-100" id="img">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselId" role="button" data-slide="prev">

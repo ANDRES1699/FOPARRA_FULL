@@ -78,7 +78,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse pr-5" id="collapsibleNavId">
-                         <a class="navbar-brand m-auto text-white" href="<?=RUTA_URL?>vendedor/mostrarMenu" id="lema">Vendedor <i class="fa fa-user-circle-o pl-1" aria-hidden="true" id="icon-ven"></i></a>
+                         <a class="navbar-brand m-auto text-white" href="<?=RUTA_URL?>vendedor/mostrarMenu" id="lema">Administrador <i class="fa fa-user-circle-o pl-1" aria-hidden="true" id="icon-ven"></i></a>
                     </div>
                 </nav>
             </div>
@@ -109,6 +109,7 @@
 <!-- Estilos -->
 <style> 
 /* columna */
+
 #navV{
     position: fixed!important;
     z-index: 15;  left: 87%;
