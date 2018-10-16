@@ -20,7 +20,7 @@
                                     <input type="text" class="form-control" name="dni" placeholder="id cliente" id="dni">
                                     <input type="text" class="form-control" name="num_pel" placeholder="número de pelicula" id="num_pel">
                                     <a title="Agregar pelicula" class="d-flex justify-content-end p-2 display-4" id="agregar"><i class="fa fa-file-movie-o" aria-hidden="true" id="pelicula"></i> </a>                
-                                    <a title="Agregar pelicula" class="btn btn-success mt-2 form-control" id="agregarA" onclick="alquilar();">Agregar</a>
+                                    <a title="Agregar pelicula" class="btn btn-success mt-2 form-control text-white " id="agregarA" onclick="alquilar();">Agregar</a>
                                 </form>
                             </div>
                         </div>
