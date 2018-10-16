@@ -5,10 +5,10 @@
 */
  class Vendedor extends Controller
  {
- 	
+ 	private $model;
  	function __construct()
  	{
- 		# code...
+ 		$this->model=parent::model('vendedor');
  	}
  	public function mostrarRegistrarCliente()
 	{
@@ -28,12 +28,26 @@
 	}	
  	public function registrarAlquiler()
 	{
+		// Fecha
+		$fh=date('Y-m-j');
+		$nfh=strtotime('+3 day', strtotime($fh));
+		$fh=date('Y-m-j',$nfh);
+		$this->model->registrarAlquiler($_POST['dni'],$fh);
+		$num=$this->model->consultarAlquileres();
+		foreach($_POST['peliculas'] as $peli){
+			$data=['alquiler_id_alquiler'=>$num,'pelicula_cod_pelicula'=>$peli];
+			$this->model->registrarPeliculaAlquiler($data);
+		}	
 		echo json_encode($_POST);
+		
 	}	
  	public function consultarAlquileresHechos()
 	{
-		$array=['nombre'=>'Juan','edad'=>'16','dni'=>$_POST['dni']];
-		echo json_encode($array);
+		$num=$this->model->consultarAlquiler($_POST['dni']);
+		$fh=date('Y-m-d');
+		$nfh=strtotime('+2 day', strtotime($fh));
+		$array=['nombre'=>'Juan','edad'=>'16','dni'=>$_POST['dni'],'fecha'=>$nfh];
+		echo json_encode($num);
 	}	
  	public function mostrarConsultarAlquileresCP ()
 	{

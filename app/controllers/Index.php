@@ -23,7 +23,7 @@ class Index extends Controller
 		try{
 			$data=$this->model->consultarUsuario($_POST['dni']);
 			if($data!=null){
-				if ($data->contrasenia != $_POST['pass']) {			
+				if ($data->contrasenia != md5($_POST['pass'])) {			
 					header('Location:'.RUTA_URL.'index/index');
 				} else {
 					// iniciar_sesion
@@ -80,6 +80,7 @@ class Index extends Controller
 	public function cerrarSesion()
 	{
 		// cerrar localStorage
+		session_destroy();
 		echo "<script>							
 				localStorage.removeItem('usuario');
 			 </script>";

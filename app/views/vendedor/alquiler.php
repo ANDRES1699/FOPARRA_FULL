@@ -17,7 +17,7 @@
                             <div class="card-body">
                                 
                                 <form  method="POST" id="alquiler">
-                                    <input type="text" class="form-control" name="dni" placeholder="dni" id="dni">
+                                    <input type="text" class="form-control" name="dni" placeholder="id cliente" id="dni">
                                     <input type="text" class="form-control" name="num_pel" placeholder="número de pelicula" id="num_pel">
                                     <a title="Agregar pelicula" class="d-flex justify-content-end p-2 display-4" id="agregar"><i class="fa fa-file-movie-o" aria-hidden="true" id="pelicula"></i> </a>                
                                     <a title="Agregar pelicula" class="btn btn-success mt-2 form-control" id="agregarA" onclick="alquilar();">Agregar</a>
@@ -52,11 +52,12 @@
                                             </button>                                
                                                 </div>
                                                 <div class="modal-body" id="frm_act">
+                                                    <form action="" method="post">
                                                     
+                                                    </form>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                                    
                                                 </div>
                                             </div>
                                         </div>
@@ -71,7 +72,7 @@
             </div>
         </div>
     </div>
-    
+  
     <style>
         #pelicula{
             color: rgb(41, 70, 124)!important;
@@ -143,8 +144,11 @@
     }
 
     function modal(data){
-        
-            $('#frm_act').html('<form action=""><input type="text" class="form-control" name="dni" placeholder="número de alquiler" id="dni" value="'+data.dni+'"><input type="text" class="form-control" name="nombre" placeholder="nombre" id="nombre" value="'+data.nombre+'"></form>');
+        // modal
+            $('#frm_act').html('<form action="" method="post">'+campo('id_alquiler',data.id_alquiler)+campo('cliente',data.usuario_idcliente)+'<select class="form-control" name="estado" id="" value="'+data.estado_idestado+'"><option value="1">Activo</option><option value="2">Inactivo</option></select><button type="submit" class="btn btn-primary mt-2">Save</button></form>');
           
+    }
+    function campo(nombre,valor){
+        return '<input type="text" class="form-control" name="'+nombre+'" placeholder="'+nombre+'" id="'+nombre+'" value="'+valor+'">';
     }
     </script>
