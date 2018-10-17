@@ -10,47 +10,39 @@
                         </tr>
                         <tr>
                             <th>Número de alquiler</th>
-                            <th>Cliente</th>
-                            <th>Número de peliculas</th>
                             <th>Fecha de entrega</th>
                             <th>Fecha a recibir</th>
+                            <th>Cliente</th>
+                            <th>Estado</th>
                         </tr>
                     </thead>
                     <tbody>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet.</td>
+                        <td>Eveniet delectus minima minus unde!</td>
+                        <td>Explicabo adipisci unde placeat dolore?</td>
+                        <td>Odio asperiores eius sunt? Consectetur!</td>
+                        <td>Corporis, eveniet. Ducimus, quod minus!</td>
+                    </tr>
+                    <?php foreach ($data as $fila):?>
                         <tr>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
+                            <td>                               
+                                <br><?=$fila->id_alquiler;?> 
                             </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
+                            <td>                               
+                                <br><?=$fila->fecha_inicio;?> 
                             </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
+                            <td>                               
+                                <br><?=$fila->fecha_fin;?> 
                             </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
+                            <td>                                
+                                <br><?=$fila->usuario_idcliente;?> 
                             </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
+                            <td>                                
+                                <br><?=$fila->estado_idestado;?> 
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet. 
-                            </td>
-                        </tr>
+                    <?php endforeach;?>
                     </tbody>
                 </table>
                 </div>

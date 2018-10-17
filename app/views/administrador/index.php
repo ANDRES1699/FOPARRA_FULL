@@ -37,31 +37,19 @@
             <li class="mt-3">
                 <div class="barra">
                 <a href="#" rel="noopener noreferrer">Gestiona</a>
-                    <a href="<?=RUTA_URL?>vendedor/mostrarRegistrarCliente" class="px-0" title="Cliente"><i class="fa fa-address-book-o" aria-hidden="true"></i></a>
-                    <a href="<?=RUTA_URL?>vendedor/mostrarRegistrarAlquiler" title="Alquiler"><i class="fa fa-film" aria-hidden="true"></i></a>
+                    <a href="<?=RUTA_URL?>administrador/mostrarRegistrarVendedor" class="px-0" title="Empleado"><i class="fa fa-address-book-o" aria-hidden="true"></i></a>
+                    <a href="<?=RUTA_URL?>administrador/mostrarRegistrarAlquiler" title="Registrar pelicula"><i class="fa fa-film" aria-hidden="true"></i></a>
                 </div>
             </li>        
             <li>
                 <div class="barra">
-                <a href="#" rel="noopener noreferrer" class="pr-2">Consulta</a>
-                <a href="" title="Consultar cliente" class="px-0"><i class="ml-2 fa fa-address-book-o" class="px-0" aria-hidden="true"></i> </a>
-                <a href="" title="Consultar alquiler" class="px-2"><i class="ml-2 fa fa-film" aria-hidden="true"></i></a>
-                </div>
-            </li>
-            <li>
-                <div class="barra">
-                    <a href="#" rel="noopener noreferrer" title="Clientes morosos">Morosos<i class="ml-2 fa fa-file-movie-o" aria-hidden="true"></i></a>
-                </div>
-            </li>
-            <li>
-                <div class="barra">
-                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado <i class="ml-2 fa fa-circle-o-notch" aria-hidden="true"></i></a>
+                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado   <a href=""><i class="fa fa-circle-o-notch" aria-hidden="true"></i></a></a>
                 </div>
             </li>
             <li>
                 <div class="barra cerrar">
                     <!-- target="_blank" rel="noopener noreferrer" -->
-                <a href="<?php echo RUTA_URL?>index/cerrarSesion" >Cerrar <i class="ml-1 fa fa-close" aria-hidden="true"></i></a>
+                <a href="<?php echo RUTA_URL?>index/cerrarSesion" >Cerrar   <a href=""><i class="fa fa-close" aria-hidden="true"></i></a></a>
                 </div>
             </li>
         </ul>
@@ -78,7 +66,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse pr-5" id="collapsibleNavId">
-                         <a class="navbar-brand m-auto text-white" href="<?=RUTA_URL?>vendedor/mostrarMenu" id="lema">Administrador <i class="fa fa-user-circle-o pl-1" aria-hidden="true" id="icon-ven"></i></a>
+                         <a class="navbar-brand m-auto text-white" href="<?=RUTA_URL?>administrador/mostrarMenu" id="lema">Administrador <i class="fa fa-user-circle-o pl-1" aria-hidden="true" id="icon-ven"></i></a>
                     </div>
                 </nav>
             </div>

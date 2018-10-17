@@ -45,23 +45,23 @@
                 <div class="barra">
                 <a href="#" rel="noopener noreferrer" class="pr-2">Consulta</a>
                 <a href="" title="Consultar cliente" class="px-0"><i class="ml-2 fa fa-address-book-o" class="px-0" aria-hidden="true"></i> </a>
-                <a href="" title="Consultar alquiler" class="px-2"><i class="ml-2 fa fa-film" aria-hidden="true"></i></a>
+                <a href="<?=RUTA_URL?>vendedor/mostrarPeliculas" title="Consultar peliculas" class="px-2"><i class="ml-2 fa fa-film" aria-hidden="true"></i></a>
                 </div>
             </li>
             <li>
                 <div class="barra">
-                    <a href="#" rel="noopener noreferrer" title="Clientes morosos">Morosos<i class="ml-2 fa fa-file-movie-o" aria-hidden="true"></i></a>
+                    <a href="#" rel="noopener noreferrer" title="Clientes morosos">Morosos<a href=""><i class="p-0 fa fa-file-movie-o" aria-hidden="true"></i></a></a>
                 </div>
             </li>
             <li>
                 <div class="barra">
-                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado <i class="ml-2 fa fa-circle-o-notch" aria-hidden="true"></i></a>
+                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado<a href=""><i class="fa fa-circle-o-notch" aria-hidden="true"></i></a></a>
                 </div>
             </li>
             <li>
                 <div class="barra cerrar">
                     <!-- target="_blank" rel="noopener noreferrer" -->
-                <a href="<?php echo RUTA_URL?>index/cerrarSesion" >Cerrar <i class="ml-1 fa fa-close" aria-hidden="true"></i></a>
+                <a href="<?php echo RUTA_URL?>index/cerrarSesion" >Cerrar<a href=""><i class="fa fa-close" aria-hidden="true"></i></a></a>
                 </div>
             </li>
         </ul>

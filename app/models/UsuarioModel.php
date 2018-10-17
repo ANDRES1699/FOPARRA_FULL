@@ -12,7 +12,7 @@ class UsuarioModel
  	}
  	public function consultarPeliculas($data='')
 	{
-	
+		
 	}	
  	public function registrarPelicula($data='')
 	{

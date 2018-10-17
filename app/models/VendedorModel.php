@@ -26,6 +26,12 @@ class VendedorModel extends UsuarioModel
 		catch(Exception $e){
 			die($e);
 		}
+	}
+	public function consultarAlquileresH($data){
+		$this->db->query("SELECT * FROM `alquiler` WHERE usuario_vendedor=?");
+		$this->db->bindP(1,$data);
+		$this->db->execute();
+		return $this->db->showAll();
 	} 
 	public function consultarAlquileres(){
 		$this->db->query("SELECT * FROM `alquiler`");
@@ -48,7 +54,14 @@ class VendedorModel extends UsuarioModel
 		$this->db->bindP(1,$data);
 		$this->db->execute();
 		return $this->db->show();
-	}	
+	}
+	public function consultarPeliculasT($data)
+	{
+	$this->db->query("SELECT * FROM `pelicula` WHERE cat_idcat=?");
+		$this->db->bindP(1,$data);
+		$this->db->execute();
+		return $this->db->showAll();
+	} 	
  	public function consultarAlquileresPelicula($data)
 	{
 		echo "Entro!";

@@ -5,10 +5,11 @@
 */
  class Administrador extends Controller
  {
+	 private $model;
 	function __construct()
  	{
- 		# code...
-	 }
+		$this->model=parent::model('administrador');
+	}
 	public function mostrarMenu()
 	{
 		parent::view('administrador/index');
@@ -19,11 +20,12 @@
 	}	
  	public function registrarVendedor()
 	{
-		echo "Entro!";
+		$this->model->registrarVendedor($_POST);
+		header('Location:'.RUTA_URL.'administrador/mostrarRegistrarVendedor');
 	}	
  	public function mostrarRegistrarVendedor()
 	{
-		echo "Entro!";
+		parent::viewIntern('administrador/index','administrador/empleado');
 	}	
  } 
  ?>

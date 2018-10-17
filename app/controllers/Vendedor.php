@@ -16,7 +16,8 @@
 	}	
 	public function mostrarMenu()
 	{
-		parent::viewIntern('vendedor/index','vendedor/ventas');
+		$data=$this->model->consultarAlquileresH($_SESSION['usuario']->idusuario);
+		parent::viewIntern('vendedor/index','vendedor/ventas',$data);
 	}	
  	public function registrarCliente()
 	{
@@ -26,6 +27,15 @@
 	{
 		parent::viewIntern('vendedor/index','vendedor/alquiler');
 	}	
+	public function mostrarPeliculas()
+	{
+		parent::viewIntern('vendedor/index','vendedor/pelicula');
+	}	
+	public function consultarP()
+	{
+		$data=$this->model->consultarPeliculasT($_SESSION['p']);
+		echo json_encode($data);
+	}
  	public function registrarAlquiler()
 	{
 		// Fecha

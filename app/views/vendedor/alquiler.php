@@ -20,7 +20,7 @@
                                     <input type="text" class="form-control" name="dni" placeholder="id cliente" id="dni">
                                     <input type="text" class="form-control" name="num_pel" placeholder="número de pelicula" id="num_pel">
                                     <a title="Agregar pelicula" class="d-flex justify-content-end p-2 display-4" id="agregar"><i class="fa fa-file-movie-o" aria-hidden="true" id="pelicula"></i> </a>                
-                                    <a title="Agregar pelicula" class="btn btn-success mt-2 form-control text-white " id="agregarA" onclick="alquilar();">Agregar</a>
+                                    <a title="Agregar pelicula" class="btn btn-outline-success mt-2 form-control " id="agregarA" onclick="alquilar();">Agregar</a>
                                 </form>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                             <div class="card-body">
                                 <form action="" method="POST">
                                     <input type="text" class="form-control" name="dni_act" placeholder="dni" id="dni_act">                            
-                                    <button type="button" class="btn btn-success mt-2 form-control" data-toggle="modal" data-target="#modelId" onclick="actualizar();">
+                                    <button type="button" class="btn btn-outline-success mt-2 form-control" data-toggle="modal" data-target="#modelId" onclick="actualizar();">
                                       Enviar
                                     </button>
                                     
@@ -97,7 +97,7 @@
         // agregar
               
             $('#agregarA').remove();
-            $('#alquiler').append('<input type="text" class="form-control" name="num_pel'+id_pel+'" placeholder="número de pelicula" id="num_pel'+id_pel+'"><a title="Agregar pelicula" class="btn btn-success mt-2 form-control" id="agregarA" onclick="alquilar();">Agregar</a>');
+            $('#alquiler').append('<input type="text" class="form-control" name="num_pel'+id_pel+'" placeholder="número de pelicula" id="num_pel'+id_pel+'"><a title="Agregar pelicula" class="btn btn-outline-success mt-2 form-control" id="agregarA" onclick="alquilar();">Agregar</a>');
             array.push('#num_pel'+id_pel);
             console.log(id_pel, array);
           });
@@ -144,10 +144,11 @@
     }
 
     function modal(data){
-        // modal
+        // formulario
             $('#frm_act').html('<form action="" method="post">'+campo('id_alquiler',data.id_alquiler)+campo('cliente',data.usuario_idcliente)+'<select class="form-control" name="estado" id="" value="'+data.estado_idestado+'"><option value="1">Activo</option><option value="2">Inactivo</option></select><button type="submit" class="btn btn-primary mt-2">Save</button></form>');
           
     }
+    //inputs
     function campo(nombre,valor){
         return '<input type="text" class="form-control" name="'+nombre+'" placeholder="'+nombre+'" id="'+nombre+'" value="'+valor+'">';
     }
