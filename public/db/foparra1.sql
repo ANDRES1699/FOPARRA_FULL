@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2018 a las 03:20:00
--- Versión del servidor: 10.1.34-MariaDB
--- Versión de PHP: 7.2.7
+-- Tiempo de generación: 15-12-2018 a las 01:52:41
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 5.6.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `foparra`
+-- Base de datos: `foparra1`
 --
 
 -- --------------------------------------------------------
@@ -215,8 +215,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idusuario`, `dni`, `fecha_nacimiento`, `nombre`, `apellido`, `direccion`, `telefono`, `correo`, `contrasenia`, `_token`, `rol_idrol`, `tipo_documento`) VALUES
-(1, '1023', '1999-10-11', 'Juan', 'Garzon', 'CLL 49', '5678060', 'Juan@email.com', '827ccb0eea8a706c4c34a16891f84e7b', 'ea5d2f1c4608232e07d3aa3d998e5135', 2, 1),
-(2, '1503', '1999-10-11', 'Camila', 'Colsin', 'CLL 40', '1567965', 'camila@email.com', '81dc9bdb52d04dc20036dbd8313ed055', 'b6d767d2f8ed5d21a44b0e5886680cb9', 3, 1),
+(1, '1023', '1999-10-11', 'Juan', 'Garzon', 'CLL 49', '5678060', 'Juan@email.com', '202cb962ac59075b964b07152d234b70', 'ad61ab143223efbc24c7d2583be69251', 2, 1),
+(2, '1503', '1999-10-11', 'Camila', 'Colsin', 'CLL 40', '1567965', 'camila@email.com', '202cb962ac59075b964b07152d234b70', '', 3, 1),
 (3, '9999', '1995-01-13', 'Juan', 'Nariño', 'Calle 23 #13', '3138783521', 'dnariño@email.com', NULL, NULL, 1, 1),
 (6, '5900', '1999-09-16', 'Condor', 'Fonseca', NULL, NULL, NULL, 'fd0efcca272f704a760c3b61dcc70fd0', 'fbd7939d674997cdb4692d34de8633c4', 2, 1),
 (7, '2', '5745-04-16', 'Juan', 'Futuresco', NULL, NULL, NULL, 'c81e728d9d4c2f636f067f89cc14862c', NULL, 2, 1),
