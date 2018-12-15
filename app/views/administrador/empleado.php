@@ -21,7 +21,7 @@
                                     <input type="date" class="form-control" name="fecha_nacimiento" placeholder="fecha_nacimiento" id="fecha_nacimiento">
                                     <input type="text" class="form-control" name="nombre" placeholder="nombre" id="nombre">
                                     <input type="text" class="form-control" name="apellido" placeholder="apellido" id="apellido">
-                                    <select name="tipo_documento">
+                                    <select name="tipo_documento" class="form-control">
                                         <option value="1">Cédula</option>
                                         <option value="2">Tarjeta de identidad</option>
                                     </select>
@@ -30,30 +30,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card-header" role="tab" id="estado">
-                            <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordianId" href="#estado_contenido" aria-expanded="true" aria-controls="estado_contenido">
-                                    Consultar
-                        </a>
-                            </h5>
-                        </div>
-                        <div id="estado_contenido" class="collapse in" role="tabpanel" aria-labelledby="estado">
-                            <div class="card-body">
-                                <!-- peliculas ficción -->
-                                <div class="container" >
-                                    <div class="row" id="3">
-                                        <form  method="POST" id="alquiler">
-                                            <input type="text" class="form-control" name="dni" placeholder="id cliente" id="dni">               
-                                            <a title="Agregar pelicula" class="btn btn-outline-success mt-2 form-control " id="agregarA" onclick="alquilar();">Agregar</a>
-                                        </form>
-                                    </div>
-                               </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                   
+                
                 </div>                 
             </div>
         </div>

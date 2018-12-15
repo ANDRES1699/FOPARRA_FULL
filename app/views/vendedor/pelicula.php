@@ -17,17 +17,7 @@
                                <!-- peliculas de aventura -->
                                <div class="container" >
                                     <div class="row" id="2">
-                                        <div class="col-4">
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <img src="<?=RUTA_URL?>img/icn1.png" alt="" class="img-fluid p-0">
-                                                </div>
-                                                    
-                                                <div class="card-body">
-                                                    Lorem, ipsum.             
-                                                </div>
-                                            </div>
-                                        </div>
+                                 
                                     </div>
                                </div>
                             </div>
@@ -91,7 +81,7 @@
                 dataType: "json",
                     success: function(data){
                         $.each(data, function(i, v) { 
-                             $('#'+id).append( '<div class="col-4"><div class="card"><div class="card-header p-0 m-0"><img src="<?=RUTA_URL?>img/'+v.imagen+'" alt="" class="img-fluid "></div><div class="card-body">'+v.nombre+' - '+v.actorPrincipal+' </div></div></div>');
+                             $('#'+id).append( '<div class="col-4"><div class="card"><div class="card-header p-0 m-0"><img src="<?=RUTA_URL?>img/'+v.imagen+'" alt="" class="img-fluid "></div><div class="card-body">'+v.nombre+' - '+v.actorPrincipal+'- $'+v.precio+' </div></div></div>');
                         });
                         console.log(data);
                     }

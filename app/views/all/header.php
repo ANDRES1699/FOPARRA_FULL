@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Foparra</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,12 +13,28 @@
     <link rel="stylesheet" href="<?php echo RUTA_URL?>/css/emple.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="icon" type="image/png" href="<?php echo RUTA_URL?>img/foparra 2.png">
     <style>
     *{
       font-family: 'Indie Flower', cursive;
     }
-    
+    #logo{
+      width:5em;
+      height:5em;
+    }    
+    .index{
+      font-size:145%!important;
+    }
     </style>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
+    <script src="<?php echo RUTA_URL?>/vendor/jquery/jquery.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready( function () {
+      $('#table_id').DataTable();
+    } );  
+</script>
+
   </head>
   <body>
+  

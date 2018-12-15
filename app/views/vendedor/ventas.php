@@ -3,27 +3,16 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-8 mt-5 mx-2">
-                <table class="table table-responsive table-hover table-inverse shadow">
-                    <thead class="text-center">
-                        <tr>
-                            <th colspan="5" class="text-white" id="ventas">Ventas</th>
-                        </tr>
-                        <tr>
-                            <th>Número de alquiler</th>
-                            <th>Fecha de entrega</th>
-                            <th>Fecha a recibir</th>
-                            <th>Cliente</th>
-                            <th>Estado</th>
-                        </tr>
+            <table id="table_id" class='display table table-fluid table table-bordered table-white table-hover'>				
+                <thead>
+                    <th>id</th>
+                    <th>nombre</th>
+                    <th>versión</th>
+                    <th>descripción</th>
+                    <th>programa al que pertenece</th>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Lorem ipsum dolor sit amet.</td>
-                        <td>Eveniet delectus minima minus unde!</td>
-                        <td>Explicabo adipisci unde placeat dolore?</td>
-                        <td>Odio asperiores eius sunt? Consectetur!</td>
-                        <td>Corporis, eveniet. Ducimus, quod minus!</td>
-                    </tr>
+                <tbody>
+                   
                     <?php foreach ($data as $fila):?>
                         <tr>
                             <td>                               

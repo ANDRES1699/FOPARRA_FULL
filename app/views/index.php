@@ -1,16 +1,16 @@
 <!-- cabecera -->
-<nav class="navbar navbar-expand-sm navbar-light bg-light px-5 shadow" id="menu">
-    <img src="<?php echo RUTA_URL?>img/logo.png" id="logo" class="navbar-brand">
+<nav class="navbar navbar-expand-sm navbar-light bg-light py-0 px-5 shadow" id="menu">
+    <img src="<?php echo RUTA_URL?>img/foparra 2.png" id="logo" class="navbar-brand mr-5">
     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
-    <a class="navbar-brand ml-auto text-white" href="#" id="lema">"El séptimo arte encanta al ser humano"</a><i class="fa fa-institution" aria-hidden="true"></i>
+    <a class="navbar-brand ml-auto text-white index" href="#" id="lema">"El séptimo arte encanta al ser humano"</a><i class="fa fa-institution" aria-hidden="true"></i>
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active px-3">
                 <h5>
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modelId">Iniciar sesión</a>
+                    <a class="nav-link index" href="#" data-toggle="modal" data-target="#modelId">Iniciar sesión</a>
                 </h5>
             </li>
    

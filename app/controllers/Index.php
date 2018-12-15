@@ -27,7 +27,7 @@ class Index extends Controller
 					header('Location:'.RUTA_URL.'index/index');
 				} else {
 					// iniciar_sesion
-					$this->token=md5(random_int(10,100));
+					$this->token=md5(rand(10,100));
 					$data=['dni'=>$_POST['dni'],'token'=>$this->token];
 					//$_SESSION['usuario']->token=$this->token;
 					//var_dump($data);

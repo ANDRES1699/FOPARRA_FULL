@@ -58,23 +58,98 @@
 		$nfh=strtotime('+2 day', strtotime($fh));
 		$array=['nombre'=>'Juan','edad'=>'16','dni'=>$_POST['dni'],'fecha'=>$nfh];
 		echo json_encode($num);
-	}	
- 	public function mostrarConsultarAlquileresCP ()
+	}
+	public function consultarC()
 	{
-		echo "Entro!";
-	}	
- 	public function consultarAlquileresCP()
+		$num=$this->model->consultarCliente($_POST['dni']);
+		echo json_encode($num);
+	}
+	public function MActualizarE()
 	{
-		echo "Entro!";
+		parent::viewIntern('vendedor/index','vendedor/estado');
 	}	
- 	public function consultarAlquileresMora()
+ 	public function ActualizarE()
 	{
-		echo "Entro!";
+		$data=['dni'=>$_SESSION['usuario']->dni,'contrasenia'=>md5($_POST['contrasenia'])];
+		$data=$this->model->acatualizarE($data);
+		header('Location:'.RUTA_URL.'vendedor/mostrarMenu');
 	}	
- 	public function actualizarEstadoAlquiler()
+	public function actualizarC()
 	{
-		echo "Entro!";
+		$data=$this->model->actualizarClient($_POST);
+		echo json_encode($_POST);		
+		// header('Location:'.RUTA_URL.'vendedor/mostrarRegistrarCliente');
 	}	
- 	
+	public function registrarCl()
+	{
+		$this->model->registrarC($_POST);
+		header('Location:'.RUTA_URL.'vendedor/mostrarRegistrarCliente');
+	}	
+	public function actualizarAl()
+	{
+		$this->model->actualizarA($_POST);
+		echo json_encode($_POST);
+	}
+	
+	public function mostrarCl()
+	{
+		$data=$this->model->consultarC();
+		parent::viewIntern('vendedor/index','vendedor/consultaC',$data);
+	}
+	public function mostrarPDFCl()
+	{
+		$data=$this->model->alquilerCliente($_SESSION['p']);	
+		$dataT=$this->model->alquileresCliente($_SESSION['p']);		
+		//pdf
+		if ($data==null) {
+			header('Location:'.RUTA_URL.'vendedor/mostrarCl');
+		}
+		else{
+			$pdf=new PDF();
+			$pdf->AddPage();
+			$pdf->SetFont('Arial','',12);
+			$html='<h2>'.$data->nombre.' '.utf8_decode($data->apellido).' - Cliente</h2><br><br>';
+
+			$pdf->WriteHTML($html);
+			$html="<table>
+						<thead>
+							<tr>
+								<td>Id alquiler</td>
+								<td>Fecha inicio</td>
+								<td>Fecha fin</td>
+							</tr>
+						</thead>
+					</table>";
+			$pdf->WriteHTML($html);
+			foreach ($dataT as $fila) {		
+				$html='<table border="1">
+							<tr>
+								<td>'.$fila->id_alquiler.'</td><td>'.$fila->fecha_inicio.'</td><td>'.$fila->fecha_fin.'</td>
+							</tr>						
+						</table>';	
+				$pdf->WriteHTML($html);
+			}
+
+			
+			$pdf->Output();
+			}
+	}
+	public function mostrarMorosos()
+	{
+		$data=$this->model->morosos();
+		foreach ($data as $key) {
+			$datetime1 = new DateTime($key->fecha_fin);
+			$datetime2 = new DateTime(date('Y-m-d'));
+			$interval = $datetime1->diff($datetime2);
+			$diferencia=$interval->format('%R%a');
+			if ($diferencia>=1 and $key->estado_idestado==1) {
+				$d=['estado_idestado'=>2, 'id_alquiler'=>$key->id_alquiler];
+				$data=$this->model->actualizarA($d);
+			}
+		}
+		$data=$this->model->morososI();	
+		parent::viewIntern('vendedor/index','vendedor/morosos',$data);
+	}
+ 
  } 
  ?>

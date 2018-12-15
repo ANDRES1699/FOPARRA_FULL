@@ -44,18 +44,15 @@
             <li>
                 <div class="barra">
                 <a href="#" rel="noopener noreferrer" class="pr-2">Consulta</a>
-                <a href="" title="Consultar cliente" class="px-0"><i class="ml-2 fa fa-address-book-o" class="px-0" aria-hidden="true"></i> </a>
+                <a href="<?=RUTA_URL?>vendedor/mostrarCl" title="Consultar cliente" class="px-0"><i class="ml-2 fa fa-address-book-o" class="px-0" aria-hidden="true"></i> </a>
                 <a href="<?=RUTA_URL?>vendedor/mostrarPeliculas" title="Consultar peliculas" class="px-2"><i class="ml-2 fa fa-film" aria-hidden="true"></i></a>
+                <a href="<?=RUTA_URL?>vendedor/mostrarMorosos" title="Consultar morosos" class="px-0"><i class="ml-2 fa fa-user" aria-hidden="true"></i></a>
                 </div>
             </li>
+           
             <li>
                 <div class="barra">
-                    <a href="#" rel="noopener noreferrer" title="Clientes morosos">Morosos<a href=""><i class="p-0 fa fa-file-movie-o" aria-hidden="true"></i></a></a>
-                </div>
-            </li>
-            <li>
-                <div class="barra">
-                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado<a href=""><i class="fa fa-circle-o-notch" aria-hidden="true"></i></a></a>
+                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado<a href="<?php echo RUTA_URL?>vendedor/MActualizarE"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></a></a>
                 </div>
             </li>
             <li>
@@ -72,7 +69,7 @@
         <div class="row">
             <div class="col-11 p-0">
                 <nav class="navbar navbar-expand-sm navbar-light bg-light px-5 mr-5 shadow" id="menu">
-                    <img src="<?php echo RUTA_URL?>img/logo.png" id="logo" class="navbar-brand mr-0">
+                    <img src="<?php echo RUTA_URL?>img/foparra 2.png" id="logo" class="navbar-brand mr-0">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

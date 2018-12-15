@@ -38,12 +38,17 @@
                 <div class="barra">
                 <a href="#" rel="noopener noreferrer">Gestiona</a>
                     <a href="<?=RUTA_URL?>administrador/mostrarRegistrarVendedor" class="px-0" title="Empleado"><i class="fa fa-address-book-o" aria-hidden="true"></i></a>
-                    <a href="<?=RUTA_URL?>administrador/mostrarRegistrarAlquiler" title="Registrar pelicula"><i class="fa fa-film" aria-hidden="true"></i></a>
+                    <a href="<?=RUTA_URL?>administrador/mostrarPelicula" title="Registrar pelicula"><i class="fa fa-film" aria-hidden="true"></i></a>
+                </div>
+            </li>
+                     <li>
+                <div class="barra">
+                  <a rel="noopener noreferrer" title="Cambiar estado" class="mr-0 pr-0">Consulta<a href="<?=RUTA_URL?>administrador/mostrarUsuarios"><i class="mx-0 px-0 fa fa-thumbs-o-up" aria-hidden="true"></i></a></a>
                 </div>
             </li>        
             <li>
                 <div class="barra">
-                  <a href="#" rel="noopener noreferrer" title="Cambiar estado">Estado   <a href=""><i class="fa fa-circle-o-notch" aria-hidden="true"></i></a></a>
+                  <a rel="noopener noreferrer" title="Cambiar estado">Estado   <a href="<?=RUTA_URL?>administrador/MActualizarE"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></a></a>
                 </div>
             </li>
             <li>
@@ -60,7 +65,7 @@
         <div class="row">
             <div class="col-11 p-0">
                 <nav class="navbar navbar-expand-sm navbar-light bg-light px-5 mr-5 shadow" id="menu">
-                    <img src="<?php echo RUTA_URL?>img/logo.png" id="logo" class="navbar-brand mr-0">
+                    <img src="<?php echo RUTA_URL?>img/foparra 2.png" id="logo" class="navbar-brand mr-0">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

@@ -10,7 +10,7 @@ class Database
 	function __construct()
 	{
 		try {
-			$this->conexion=new PDO('mysql:host=localhost;dbname=foparra;charset=utf8','root','');
+			$this->conexion=new PDO('mysql:host=localhost;dbname=foparra1;charset=utf8','root','');
 		} catch (PDOException $e) {
 			die($e->getMessage());
 		}

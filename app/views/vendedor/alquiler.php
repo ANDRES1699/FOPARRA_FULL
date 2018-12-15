@@ -35,7 +35,6 @@
                         </div>
                         <div id="estado_contenido" class="collapse in" role="tabpanel" aria-labelledby="estado">
                             <div class="card-body">
-                                <form action="" method="POST">
                                     <input type="text" class="form-control" name="dni_act" placeholder="dni" id="dni_act">                            
                                     <button type="button" class="btn btn-outline-success mt-2 form-control" data-toggle="modal" data-target="#modelId" onclick="actualizar();">
                                       Enviar
@@ -52,17 +51,15 @@
                                             </button>                                
                                                 </div>
                                                 <div class="modal-body" id="frm_act">
-                                                    <form action="" method="post">
-                                                    
-                                                    </form>
+                                                   
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                                    
+                                                            <button type="button" class="btn btn-primary" id="actA">Actualizar</button>
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                                                    
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
                             </div>
                         
                         </div>
@@ -131,7 +128,6 @@
       }
     //   actualizar
     function actualizar(){
-        $('#frm_act').html('<p>lorem</p>');
         $.ajax({
                 method: "POST",
                 url: "<?=RUTA_URL?>vendedor/consultarAlquileresHechos",
@@ -145,11 +141,24 @@
 
     function modal(data){
         // formulario
-            $('#frm_act').html('<form action="" method="post">'+campo('id_alquiler',data.id_alquiler)+campo('cliente',data.usuario_idcliente)+'<select class="form-control" name="estado" id="" value="'+data.estado_idestado+'"><option value="1">Activo</option><option value="2">Inactivo</option></select><button type="submit" class="btn btn-primary mt-2">Save</button></form>');
+            $('#frm_act').html('<form action="<?=RUTA_URL?>vendedor/actualizarAl" method="post">'+campo('id_alquiler',data.id_alquiler, 'disabled')+'<select class="form-control" name="estado_idestado" id="estado_idestado" value="'+data.estado_idestado+'"><option value="0">--   --</option><option value="1">Activo</option><option value="2">Inactivo</option></select><button type="submit" class="btn btn-primary mt-2">Save</button></form>');
           
     }
     //inputs
-    function campo(nombre,valor){
-        return '<input type="text" class="form-control" name="'+nombre+'" placeholder="'+nombre+'" id="'+nombre+'" value="'+valor+'">';
+    function campo(nombre,valor,tipo=''){
+        return '<input type="text" class="form-control" name="'+nombre+'" placeholder="'+nombre+'" id="'+nombre+'" value="'+valor+'" '+tipo+'>';
     }
+    $('#actA').click(function(){
+            $.ajax({
+                    method: "POST",
+                    url: "<?=RUTA_URL?>vendedor/actualizarAl",
+                    data: {estado_idestado:$('#estado_idestado').val(), id_alquiler:$('#id_alquiler').val()},
+                    dataType: "json",
+                        success: function(data){
+                            console.log(data);
+                            
+                        }
+                   });
+                    location.href = "<?=RUTA_URL?>vendedor/mostrarRegistrarAlquiler";
+        });
     </script>

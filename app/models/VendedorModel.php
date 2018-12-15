@@ -5,15 +5,18 @@
 */
 class VendedorModel extends UsuarioModel
 {
-	private $db;
-	function __construct()
- 	{
-		$this->db=new Database();
- 	}
- 	public function registrarCliente($data)
-	{
-		echo "Entro!";
-	}	
+	
+	 public function registrarC($data)
+	 {
+		 $this->db->query("INSERT INTO `usuario`(`dni`, `fecha_nacimiento`, `nombre`, `apellido`,`contrasenia`, `rol_idrol`, `tipo_documento`) VALUES (?,?,?,?,?,1,?)");
+		 $this->db->bindP(1,$data['dni']);
+		 $this->db->bindP(2,$data['fecha_nacimiento']);
+		 $this->db->bindP(3,$data['nombre']);
+		 $this->db->bindP(4,$data['apellido']);
+		 $this->db->bindP(5,null);
+		 $this->db->bindP(6,$data['tipo_documento']);
+		 $this->db->execute();
+	 }
  	public function registrarAlquiler($dni,$fecha)
 	{
 		try{
@@ -55,6 +58,13 @@ class VendedorModel extends UsuarioModel
 		$this->db->execute();
 		return $this->db->show();
 	}
+	public function consultarCliente($data)
+	{
+		$this->db->query("SELECT * FROM `usuario` WHERE `idusuario`=? AND rol_idrol=1");
+		$this->db->bindP(1,$data);
+		$this->db->execute();
+		return $this->db->show();
+	}
 	public function consultarPeliculasT($data)
 	{
 	$this->db->query("SELECT * FROM `pelicula` WHERE cat_idcat=?");
@@ -62,21 +72,53 @@ class VendedorModel extends UsuarioModel
 		$this->db->execute();
 		return $this->db->showAll();
 	} 	
- 	public function consultarAlquileresPelicula($data)
+	public function consultarC()
 	{
-		echo "Entro!";
-	} 
-	public function consultarAlquileresVencidos($data)
-	{
-		echo "Entro!";
-	}	
- 	public function actualizarEstadoAlquileres($data)
-	{
-		echo "Entro!";
+		$this->db->query("SELECT * FROM `usuario` WHERE  rol_idrol=1");
+		$this->db->execute();
+		return $this->db->showAll();
+	} 	
+	public function acatualizarE($data){
+		$this->db->query("UPDATE usuario SET contrasenia=? WHERE dni=?");
+		$this->db->bindP(1,$data['contrasenia']);
+		$this->db->bindP(2,$data['dni']);
+		$this->db->execute();
 	}
-	public function consultarAlquileresVendedor($data)
-	{
-		echo "Entro!";
+	public function actualizarClient($data){
+		$this->db->query("UPDATE `usuario` SET `fecha_nacimiento`=?, `nombre`=? WHERE `idusuario`=?");
+		$this->db->bindP(1,$data['fechaN']);
+		$this->db->bindP(2,$data['nombre']);
+		$this->db->bindP(3,$data['idusuario']);
+		$this->db->execute();
+	}
+	public function actualizarA($data){
+		$this->db->query("UPDATE `alquiler` SET `estado_idestado`=? WHERE `id_alquiler`=?");
+		$this->db->bindP(1,$data['estado_idestado']);
+		$this->db->bindP(2,$data['id_alquiler']);
+		$this->db->execute();
+	}
+
+	public function alquilerCliente($data){
+		$this->db->query("SELECT * FROM `alquiler` INNER JOIN usuario ON alquiler.usuario_idcliente=usuario.idusuario WHERE `usuario_idcliente`=?");
+		$this->db->bindP(1,$data);
+		$this->db->execute();		
+		return $this->db->show();
+	}
+	public function alquileresCliente($data){
+		$this->db->query("SELECT * FROM `alquiler` INNER JOIN usuario ON alquiler.usuario_idcliente=usuario.idusuario WHERE `usuario_idcliente`=?");
+		$this->db->bindP(1,$data);
+		$this->db->execute();		
+		return $this->db->showAll();
+	}
+	public function morosos(){
+		$this->db->query("SELECT * FROM `alquiler` INNER JOIN estado ON alquiler.estado_idestado=estado.idestado");
+		$this->db->execute();		
+		return $this->db->showAll();
+	}
+	public function morososI(){
+		$this->db->query("SELECT * FROM `alquiler` INNER JOIN estado ON alquiler.estado_idestado=estado.idestado WHERE estado_idestado=2");
+		$this->db->execute();		
+		return $this->db->showAll();
 	}
 }
 

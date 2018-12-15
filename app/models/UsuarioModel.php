@@ -5,7 +5,7 @@
 */
 class UsuarioModel
 {
-	private $db;
+	protected $db;
 	function __construct()
  	{
  		$this->db=new Database();
@@ -35,12 +35,14 @@ class UsuarioModel
 		$this->db->bindP(2,$data['dni']);
 		$this->db->execute();
 	}
+	
 	public function quitarToken($data){
 		$this->db->query("UPDATE usuario SET _token='' WHERE dni=?");
 		$this->db->bindP(1,$data['token']);
 		$this->db->bindP(2,$data['dni']);
 		$this->db->execute();
 	}
+
 }
 
  ?>
