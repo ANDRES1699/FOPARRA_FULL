@@ -1,4 +1,5 @@
 <?php 
+/*Copyright (C)*/
 // ruta aplicaciòn
 define('RUTA_APP',dirname(dirname(dirname(__FILE__))));
 // ruta de la url

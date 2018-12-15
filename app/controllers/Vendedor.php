@@ -1,6 +1,6 @@
 <?php 
 /**
-  * @author:Felipe
+  * Copyright (C) @author:Felipe 
   * Funcionalidad vendedor 
 */
  class Vendedor extends Controller

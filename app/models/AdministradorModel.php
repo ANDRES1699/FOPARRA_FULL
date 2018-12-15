@@ -1,6 +1,6 @@
 <?php 
 /**
-  * @author:Felipe
+  * Copyright (C) @author:Felipe 
   * Funcionalidad modelo administrador 
 */
 class AdministradorModel extends UsuarioModel

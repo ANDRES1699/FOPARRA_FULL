@@ -65,7 +65,8 @@
     </nav>
     </div>
     <!-- cabecera -->
-    <div class="contenedor-fluid">
+    <!-- Copyright (C) author:Felipe  -->
+<div class="contenedor-fluid">
         <div class="row">
             <div class="col-11 p-0">
                 <nav class="navbar navbar-expand-sm navbar-light bg-light px-5 mr-5 shadow" id="menu">

@@ -1,6 +1,6 @@
 <?php 
 /**
-  * @author:Felipe
+  * Copyright (C) @author:Felipe 
   * Funcionalidad cliente
   */
  class Cliente extends Controller
